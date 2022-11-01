@@ -14,6 +14,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import POjO.CreateBookingResponse;
+import POjO.booking;
+import Utitility.TokenUtil;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
@@ -80,27 +82,34 @@ public class CreateBookingBrokerTest8 extends BaseTest {
 
 		System.out.println(booking_Id);
 
-		cb1.getBooking().setAdditionalneeds("Snacks");
+		cb1.getBooking().setTotalprice(2986);
+				
+		booking bookUpd=cb1.getBooking();
+
+		
 
 		Gson mapperUpd = new GsonBuilder().create();
 		String jsonUpd = null;
 
-		jsonUpd = mapperUpd.toJson(cb1);
+		jsonUpd = mapperUpd.toJson(bookUpd);
 
 		System.out.println(jsonUpd);
-		
-		Map<String,Object> headers=new HashMap<String,Object>();
+		String Token = (String) TokenUtil.getAccessToken().get("token");
+
+		Map<String, Object> headers = new HashMap<String, Object>();
 		headers.put("Accept", "application/json");
 		headers.put("Content_type", "application/json");
+		//headers.put("cookie", Token);
 
 		RequestSpecification request1 = RestAssured.given().log().all();
 		request1.headers(headers);
 		request1.body(jsonUpd);
+
 		request1.pathParam("id", booking_Id);
 
 		Response response1 = request1.log().all().put("/booking/{id}").andReturn();
 
-		// System.out.println(response1.getSessionId());
+		System.out.println(response1.getStatusCode());
 
 		System.out.println("PUT Response==>" + response1.asString());
 	}

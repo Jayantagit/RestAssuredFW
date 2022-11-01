@@ -14,6 +14,7 @@ import com.google.gson.GsonBuilder;
 
 import POjO.CreateBookingResponse;
 import POjO.booking;
+import Utitility.TokenUtil;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
@@ -75,6 +76,9 @@ public class CreateBookingBrokerTest7 extends BaseTest {
 	public void updateBookingTest(ITestContext context) {
 
 		System.out.println("===========PUT================");
+		String Token=(String)TokenUtil.getAccessToken().get("token");
+		
+		System.out.println("Token id .."+Token);
 
 		int booking_Id = (int) context.getAttribute("id");
 
@@ -91,7 +95,8 @@ public class CreateBookingBrokerTest7 extends BaseTest {
 
 		RequestSpecification request1 = RestAssured.given().log().all();
 		request1.contentType(ContentType.JSON);
-		request1.header("Cookie", "token=abc123");
+		request1.header("Cookie",Token);
+		request1.header("Accept", "application/json");
 		request1.body(jsonUpd);
 		request1.pathParam("id", booking_Id);
 

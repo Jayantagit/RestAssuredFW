@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse--1635046964\testng-customsuite.xml</span>
+                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse-946072292\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.krogerqa.service.scenarios.seedTest" hash-for-method="seedTest({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Res...)">seedTest({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Res...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.krogerqa.service.scenarios.seedTest" hash-for-method="seedTest({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=...)">seedTest({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="RestfulBooker.GetToken" hash-for-method="getAccessToken">getAccessToken</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,23 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.krogerqa.service.scenarios.seedTest</span>
+              <span class="class-name">RestfulBooker.GetToken</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="seedTest({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Res...)">
-                  </a> <!-- seedTest({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Res...) -->
-                  <span class="method-name">seedTest</span>
-                  <span class="parameters">({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Response=carrierResponse.json})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="seedTest({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=...)">
-                  </a> <!-- seedTest({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=...) -->
-                  <span class="method-name">seedTest</span>
-                  <span class="parameters">({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=crudResponse.json})</span>
+                  <a name="getAccessToken">
+                  </a> <!-- getAccessToken -->
+                  <span class="method-name">getAccessToken</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse--1635046964\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse-946072292\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +144,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.krogerqa.service.scenarios.seedTest&quot;/&gt;
+      &lt;class name=&quot;RestfulBooker.GetToken&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,20 +184,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'seedTest')
-data.setCell(0, 2, 'com.krogerqa.service.scenarios.seedTest')
-data.setCell(0, 3, 26);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'seedTest')
-data.setCell(1, 2, 'com.krogerqa.service.scenarios.seedTest')
-data.setCell(1, 3, 0);
+data.setCell(0, 1, 'getAccessToken')
+data.setCell(0, 2, 'RestfulBooker.GetToken')
+data.setCell(0, 3, 8918);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 ms</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -237,14 +219,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.krogerqa.service.scenarios.seedTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">RestfulBooker.GetToken</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">seedTest({TestCaseName=TC_01, ServiceName=CRUD, executionFlag=Y, Request=crudRequest.json, Expected_Response=...)</span>
+                <span class="method-name">getAccessToken</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">seedTest({TestCaseName=TC_03, ServiceName=Carrier, executionFlag=Y, Request=CarrierRequest.json, Expected_Res...)</span>
-                <span class="method-start">28 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
